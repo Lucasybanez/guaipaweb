@@ -10,6 +10,7 @@
 
   /* === NEUTROS === */
   --color-bg: #F7F8F6;
+  --color-bg-strong: #efeeee;
   --color-surface: #FFFFFF;
   --color-border: #E3E6E1;
 
@@ -82,7 +83,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 3rem;
 }
 
 h3 {

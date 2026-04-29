@@ -1,9 +1,13 @@
+import styles from './Inicio.module.css';
+
+import bienvenidaImg from '../../assets/Inicio/bienvenida.png';
+
 const Inicio = () => {
     return (
-            <div>
-          <section>
-            <div>
-              <p>Formamos talento, inspiramos futuras generaciones</p>
+        <div>
+          <section className={styles.bienvenida}>
+            <div className={styles.bienvenida_boxInfo}>
+              <p className={styles.bienvenida_boxInfo_p1}>Formamos talento, inspiramos futuras generaciones</p>
               <h2>Arte, educación y transformación</h2>
               <p>Carreras terciarias orientadas a la formación integral de educadores de danza y música.</p>
               <div>
@@ -11,7 +15,7 @@ const Inicio = () => {
                 <button>SOBRE EL INSTITUTO</button>
               </div>
             </div>
-            <img/>
+            <img src={bienvenidaImg} className={styles.bienvenida_boxImg}/>
           </section>
 
           <section>
@@ -92,7 +96,7 @@ const Inicio = () => {
           <seccion>
             {/* Aquí irán las noticias */}
           </seccion>
-    </div>
+        </div>
     );
 }
 
