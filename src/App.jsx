@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
+import Inicio from './pages/Inicio/Inicio'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-          <h1>Hola mundo: Guaipa.com</h1>
-
+      <Inicio />
     </>
   )
 }
