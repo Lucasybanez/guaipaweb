@@ -1,6 +1,7 @@
 import styles from './Inicio.module.css';
 
 import bienvenidaImg from '../../assets/Inicio/bienvenida.png';
+import profDanza from "../../assets/Inicio/prof_Danza.png";
 
 const Inicio = () => {
     return (
@@ -10,54 +11,54 @@ const Inicio = () => {
               <p className={styles.bienvenida_boxInfo_p1}>Formamos talento, inspiramos futuras generaciones</p>
               <h2>Arte, educación y transformación</h2>
               <p>Carreras terciarias orientadas a la formación integral de educadores de danza y música.</p>
-              <div>
-                <button>CONOCÉ NUESTRAS CARRERAS</button>
-                <button>SOBRE EL INSTITUTO</button>
+              <div className={styles.bienvenida_boxInfo_btns}>
+                <button className={styles.botonPrimario}>CONOCÉ NUESTRAS CARRERAS</button>
+                <button className={styles.botonSecundario}>SOBRE EL INSTITUTO</button>
               </div>
             </div>
             <img src={bienvenidaImg} className={styles.bienvenida_boxImg}/>
           </section>
 
-          <section>
-            <div>
+          <section className={styles.nuestrasCarreras}>
+            <div className={styles.nuestrasCarreras_encabezado}>
               <h3>NUESTRAS CARRERAS</h3>
               <h2>Elegí tu vocación, formá tu futuro</h2>
             </div>
-            <div>
+            <div className={styles.nuestrasCarreras_carreras}>
 
-              <div>
-                <div>
-                  <div>
+              <div className={styles.nuestrasCarreras_carreras_carrera}>
+                <div className={styles.nuestrasCarreras_carreras_carrera_info}> 
+                  <div className={styles.nuestrasCarreras_carreras_carrera_info_encabezado}>
                     <img src="" alt="" />
-                    <div>
-                      <p>Profesorado de</p>
-                      <h4>Danza</h4>
+                    <div className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos}>
+                      <p className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_p1}>Profesorado de</p>
+                      <h4 className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_h4}>Danza</h4>
                       <p>con orientación en</p>
-                      <p>Danza Folklórica</p>
+                      <p className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_p3}>Danza Folklórica</p>
                     </div>
                   </div>
                   <p>Formamos docentes capaces de transmitir, investigar y valorar nuestras danzas tradicionales, promoviendo la identidad cultural y el patrimonio.</p>
                   <button>MÁS INFORMACIÓN</button>
                 </div>
-                <img src="" alt="" />
+                <img src={profDanza} alt="" />
               </div>
 
-              <div>
-                <div>
-                  <div>
-                    <img src="" alt="" />
-                    <div>
-                      <p>Profesorado de</p>
-                      <h4>Música</h4>
-                      <p>con orientación en</p>
-                      <p>Educación Musical</p>
-                    </div>
-                  </div>
-                  <p>Preparamos educadores musicales con herramientas pedagógicas y artísticas para inspirar el aprendizaje y el desarrollo integral a través de la música.</p>
-                  <button>MÁS INFORMACIÓN</button>
-                </div>
-                <img src="" alt="" />
-              </div>
+              <div className={styles.nuestrasCarreras_carreras_carrera}>
+  <div className={styles.nuestrasCarreras_carreras_carrera_info}> 
+    <div className={styles.nuestrasCarreras_carreras_carrera_info_encabezado}>
+      <img src="" alt="" />
+      <div className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos}>
+        <p className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_p1}>Profesorado de</p>
+        <h4 className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_h4}>Música</h4>
+        <p>con orientación en</p>
+        <p className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_p3}>Educación Musical</p>
+      </div>
+    </div>
+    <p>Preparamos educadores musicales con herramientas pedagógicas y artísticas para inspirar el aprendizaje y el desarrollo integral a través de la música.</p>
+    <button>MÁS INFORMACIÓN</button>
+  </div>
+  <img src={profDanza} alt="" />
+</div>
             </div>
 
           </section>
