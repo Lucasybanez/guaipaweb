@@ -75,7 +75,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px 20px;
+    padding: 50px 0px;
     gap: 40px;
 }
 
@@ -83,7 +83,12 @@
     text-align: center;
 }
 
+.nuestrasCarreras_encabezado h3 {
+    color: var(--color-primary) !important;
+}
+
 .nuestrasCarreras_carreras {
+    
     margin: 0 5%;
     display: flex;
     flex-direction: row;
@@ -112,7 +117,7 @@
 
 .nuestrasCarreras_carreras_carrera_info_encabezado {
     display: flex;
-    flex-direction: column;
+    flex-direction: wrap;
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -137,9 +142,50 @@
     margin: -5px 0;
 }
 
+.nuestrasCarreras_carreras_carrera_info button {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
 .nuestrasCarreras_carreras_carrera img {
     width: 40%;
     height: auto;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+/* SECCIÓN DE DISTINTIVOS */
+
+.distintivos {
+    margin: 0 5%;
+    display: flex;
+    flex-direction: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    border-radius: 20px;
+    background-color: var(--color-primary);
+}
+
+.distintivos_box {
+    display: flex;
+    flex-direction: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-right: 0.5px solid var(--color-primary-light);
+}
+
+.distintivos_box h3 {
+    color: white;
+    font-size: 1.5rem;
+}
+.distintivos_box p {
+    color: white;
+    font-size: 1rem;
 }

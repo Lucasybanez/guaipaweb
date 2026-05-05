@@ -2,6 +2,8 @@ import styles from './Inicio.module.css';
 
 import bienvenidaImg from '../../assets/Inicio/bienvenida.png';
 import profDanza from "../../assets/Inicio/prof_Danza.png";
+import profDanzaIcon from "../../assets/Inicio/prof_DanzaIcon.png";
+import profMusicaIcon from "../../assets/Inicio/prof_MusicaIcon.png";
 
 const Inicio = () => {
     return (
@@ -29,7 +31,7 @@ const Inicio = () => {
               <div className={styles.nuestrasCarreras_carreras_carrera}>
                 <div className={styles.nuestrasCarreras_carreras_carrera_info}> 
                   <div className={styles.nuestrasCarreras_carreras_carrera_info_encabezado}>
-                    <img src="" alt="" />
+                    <img src={profDanzaIcon} alt=""/>
                     <div className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos}>
                       <p className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_p1}>Profesorado de</p>
                       <h4 className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_h4}>Danza</h4>
@@ -44,48 +46,50 @@ const Inicio = () => {
               </div>
 
               <div className={styles.nuestrasCarreras_carreras_carrera}>
-  <div className={styles.nuestrasCarreras_carreras_carrera_info}> 
-    <div className={styles.nuestrasCarreras_carreras_carrera_info_encabezado}>
-      <img src="" alt="" />
-      <div className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos}>
-        <p className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_p1}>Profesorado de</p>
-        <h4 className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_h4}>Música</h4>
-        <p>con orientación en</p>
-        <p className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_p3}>Educación Musical</p>
-      </div>
-    </div>
-    <p>Preparamos educadores musicales con herramientas pedagógicas y artísticas para inspirar el aprendizaje y el desarrollo integral a través de la música.</p>
-    <button>MÁS INFORMACIÓN</button>
-  </div>
-  <img src={profDanza} alt="" />
-</div>
+                <div className={styles.nuestrasCarreras_carreras_carrera_info}> 
+                  <div className={styles.nuestrasCarreras_carreras_carrera_info_encabezado}>
+                    <img src={profMusicaIcon} alt="" />
+                    <div className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos}>
+                      <p className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_p1}>Profesorado de</p>
+                      <h4 className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_h4}>Música</h4>
+                      <p>con orientación en</p>
+                      <p className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_p3}>Educación Musical</p>
+                    </div>
+                  </div>
+                  <p>Preparamos educadores musicales con herramientas pedagógicas y artísticas para inspirar el aprendizaje y el desarrollo integral a través de la música.</p>
+                  <button>MÁS INFORMACIÓN</button>
+                </div>
+                <img src={profDanza} alt="" />
+              </div>
             </div>
 
           </section>
 
-          <seccion>
-            <div>
+
+
+          <seccion className={styles.distintivos}>
+            <div className={styles.distintivos_box}>
               <img src="" alt="" />
               <div>
                 <h3>Formación de calidad</h3>
                 <p>Docentes especializados y enfoque pedagógico integral.</p>
               </div>
             </div>
-            <div>
+            <div className={styles.distintivos_box}>
               <img src="" alt="" />
               <div>
                 <h3>Comunidad artística</h3>
                 <p>Un espacio de aprendizaje y creación y colaboración</p>
               </div>
             </div>
-            <div>
+            <div className={styles.distintivos_box}>
               <img src="" alt="" />
               <div>
                 <h3>Compromiso cultural</h3>
                 <p>Promovemos la identidad, el arte y la educación</p>
               </div>
             </div>
-            <div>
+            <div className={styles.distintivos_box}>
               <img src="" alt="" />
               <div>
                 <h3>Proyección profesional</h3>
