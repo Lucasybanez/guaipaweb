@@ -1,0 +1,94 @@
+.footer {
+  background: var(--color-primary);
+  color: #ffffff;
+  font-family: sans-serif; /* 👈 fuente global */
+  padding: 40px 60px 20px;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Forzar que TODO sea blanco */
+.footer * {
+  color: #ffffff;
+}
+
+/* Layout principal */
+.container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Brand */
+.brand img {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.brand p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* Títulos */
+.links h4,
+.contact h4,
+.social h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Links */
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.links li:hover {
+  opacity: 1;
+}
+
+/* Contacto */
+.contact p {
+  font-size: 14px;
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+
+/* Redes */
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icons span {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.icons span:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Bottom */
+.bottom {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  opacity: 0.8;
+}

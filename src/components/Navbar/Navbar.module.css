@@ -1,0 +1,55 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #ffffff;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+
+.menu li {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--color-primary);
+  position: relative;
+  padding-bottom: 5px;
+  transition: 0.2s;
+}
+
+/* Hover opcional */
+.menu li:hover {
+  opacity: 0.8;
+}
+
+/* Pestaña activa */
+.active {
+  border-bottom: 3px solid var(--color-primary);
+}
+
+/* CTA */
+.cta {
+  background-color: var(--color-primary);
+  color: #ffffff !important;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+}

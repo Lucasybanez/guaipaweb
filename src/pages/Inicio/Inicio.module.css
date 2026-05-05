@@ -1,6 +1,7 @@
 /* SECCIÓN DE BIENVENIDA */
 
 .bienvenida {
+    margin-top:80px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -170,6 +171,7 @@
     gap: 40px;
     border-radius: 20px;
     background-color: var(--color-primary);
+    margin-bottom: 180px;
 }
 
 .distintivos_box {
