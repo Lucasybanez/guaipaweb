@@ -162,25 +162,40 @@
 
 /* SECCIÓN DE DISTINTIVOS */
 
+/* SECCIÓN DE DISTINTIVOS */
+
 .distintivos {
-    margin: 0 5%;
+    margin: 0 5% 180px;
     display: flex;
-    flex-direction: wrap;
-    align-items: center;
+    flex-wrap: wrap; /* corregido */
+    align-items: stretch; /* importante para igualar alturas */
     justify-content: center;
-    gap: 40px;
-    border-radius: 20px;
     background-color: var(--color-primary);
-    margin-bottom: 180px;
+    border-radius: 20px;
+    overflow: hidden; /* evita bordes sobrantes */
 }
 
+/* BOXES */
 .distintivos_box {
+    flex: 1 1 250px; /* todas crecen igual y tienen base */
     display: flex;
-    flex-direction: wrap;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding: 20px;
     border-right: 0.5px solid var(--color-primary-light);
+}
+
+/* eliminar borde de la última */
+.distintivos_box:last-child {
+    border-right: none;
+}
+
+/* IMÁGENES */
+.distintivos_box img {
+    width: 50px; /* tamaño fijo */
+    height: auto;
+    object-fit: contain;
 }
 
 .distintivos_box h3 {

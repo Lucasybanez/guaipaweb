@@ -5,6 +5,11 @@ import profDanza from "../../assets/Inicio/prof_Danza.png";
 import profDanzaIcon from "../../assets/Inicio/prof_DanzaIcon.png";
 import profMusicaIcon from "../../assets/Inicio/prof_MusicaIcon.png";
 
+import distintivo1 from "../../assets/Inicio/distintivo1_icon.png";
+import distintivo2 from "../../assets/Inicio/distintivo2_icon.png";
+import distintivo3 from "../../assets/Inicio/distintivo3_icon.png";
+import distintivo4 from "../../assets/Inicio/distintivo4_icon.png";
+
 const Inicio = () => {
     return (
         <div>
@@ -69,28 +74,28 @@ const Inicio = () => {
 
           <seccion className={styles.distintivos}>
             <div className={styles.distintivos_box}>
-              <img src="" alt="" />
+              <img src={distintivo1} alt="" />
               <div>
                 <h3>Formación de calidad</h3>
                 <p>Docentes especializados y enfoque pedagógico integral.</p>
               </div>
             </div>
             <div className={styles.distintivos_box}>
-              <img src="" alt="" />
+              <img src={distintivo2} alt="" />
               <div>
                 <h3>Comunidad artística</h3>
                 <p>Un espacio de aprendizaje y creación y colaboración</p>
               </div>
             </div>
             <div className={styles.distintivos_box}>
-              <img src="" alt="" />
+              <img src={distintivo3} alt="" />
               <div>
                 <h3>Compromiso cultural</h3>
                 <p>Promovemos la identidad, el arte y la educación</p>
               </div>
             </div>
             <div className={styles.distintivos_box}>
-              <img src="" alt="" />
+              <img src={distintivo4} alt="" />
               <div>
                 <h3>Proyección profesional</h3>
                 <p>Herramientas para desarrollarte</p>
