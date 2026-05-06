@@ -2,6 +2,8 @@ import styles from './Inicio.module.css';
 
 import bienvenidaImg from '../../assets/Inicio/bienvenida.png';
 import profDanza from "../../assets/Inicio/prof_Danza.png";
+import profMusica from "../../assets/Inicio/prof_Musica.png";
+
 import profDanzaIcon from "../../assets/Inicio/prof_DanzaIcon.png";
 import profMusicaIcon from "../../assets/Inicio/prof_MusicaIcon.png";
 
@@ -64,7 +66,7 @@ const Inicio = () => {
                   <p>Preparamos educadores musicales con herramientas pedagógicas y artísticas para inspirar el aprendizaje y el desarrollo integral a través de la música.</p>
                   <button>MÁS INFORMACIÓN</button>
                 </div>
-                <img src={profDanza} alt="" />
+                <img src={profMusica} alt="" />
               </div>
             </div>
 

@@ -206,3 +206,155 @@
     color: white;
     font-size: 1rem;
 }
+
+/* RESPONSIVE DE CELULAR */
+@media (max-width: 768px) {
+
+    /* BIENVENIDA */
+     .bienvenida {
+        position: relative;
+        height: auto;
+        min-height: 30vh;
+        padding: 40px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+
+.bienvenida_boxImg {
+    position: absolute;
+    top: 0;
+    right: 0; /* la pegás a la derecha */
+    width: 40%; /* 👈 solo ocupa el 40% */
+    height: 100%;
+    object-fit: cover;
+    object-position: left center; /* 👈 muestra la parte izquierda de la imagen */
+    z-index: 0;
+}
+
+    /* contenido arriba */
+    .bienvenida_boxInfo {
+        position: relative;
+        z-index: 1;
+        width: 80% !important;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0;
+    }
+
+    .bienvenida_boxInfo h2 {
+        font-size: 1.8rem;
+    }
+
+    /* botones */
+    .bienvenida_boxInfo_btns {
+        width: 100%;
+    }
+
+    .botonPrimario {
+        width: 100%;
+    }
+
+    /* ocultar botón secundario */
+    .botonSecundario {
+        display: none;
+    }
+
+
+    /* CARRERAS */
+    .nuestrasCarreras_carreras {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nuestrasCarreras_carreras_carrera {
+        flex-direction: column;
+    }
+
+    .nuestrasCarreras_carreras_carrera_info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nuestrasCarreras_carreras_carrera img {
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .nuestrasCarreras_carreras_carrera_info_encabezado {
+        flex-direction: column;
+    }
+
+    .nuestrasCarreras_carreras_carrera_info_encabezado_titulos_h4 {
+        font-size: 2rem;
+    }
+
+
+    /* DISTINTIVOS */
+    .distintivos {
+        margin-bottom: 100px;
+    }
+
+    .distintivos_box {
+        flex: 1 1 100%;
+        border-right: none;
+        border-bottom: 0.5px solid var(--color-primary-light);
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .distintivos_box:last-child {
+        border-bottom: none;
+    }
+}
+
+/* RESPONSIVE DE TABLET */
+
+@media (max-width: 1024px) {
+
+    /* BIENVENIDA */
+    .bienvenida {
+        height: auto;
+        padding: 40px;
+        gap: 20px;
+    }
+
+    .bienvenida_boxInfo {
+        width: 60%;
+    }
+
+    .bienvenida_boxImg {
+        width: 40%;
+    }
+
+
+    /* CARRERAS */
+    .nuestrasCarreras_carreras {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nuestrasCarreras_carreras_carrera {
+        width: 45%;
+    }
+
+    .nuestrasCarreras_carreras_carrera_info {
+        width: 100%;
+    }
+
+    .nuestrasCarreras_carreras_carrera img {
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+    }
+
+
+    /* DISTINTIVOS */
+    .distintivos_box {
+        flex: 1 1 50%;
+    }
+
+    .distintivos_box:nth-child(2n) {
+        border-right: none;
+    }
+}
