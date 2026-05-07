@@ -46,7 +46,7 @@ const Inicio = () => {
                       <p className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_p3}>Danza Folklórica</p>
                     </div>
                   </div>
-                  <p>Formamos docentes capaces de transmitir, investigar y valorar nuestras danzas tradicionales, promoviendo la identidad cultural y el patrimonio.</p>
+                  <p className={styles.nuestrasCarreras_carreras_carrera_info_parrafo}>Formamos docentes capaces de transmitir, investigar y valorar nuestras danzas tradicionales, promoviendo la identidad cultural y el patrimonio.</p>
                   <button>MÁS INFORMACIÓN</button>
                 </div>
                 <img src={profDanza} alt="" />
@@ -63,7 +63,7 @@ const Inicio = () => {
                       <p className={styles.nuestrasCarreras_carreras_carrera_info_encabezado_titulos_p3}>Educación Musical</p>
                     </div>
                   </div>
-                  <p>Preparamos educadores musicales con herramientas pedagógicas y artísticas para inspirar el aprendizaje y el desarrollo integral a través de la música.</p>
+                  <p className={styles.nuestrasCarreras_carreras_carrera_info_parrafo}>Preparamos educadores musicales con herramientas pedagógicas y artísticas para inspirar el aprendizaje y el desarrollo integral a través de la música.</p>
                   <button>MÁS INFORMACIÓN</button>
                 </div>
                 <img src={profMusica} alt="" />
@@ -106,7 +106,7 @@ const Inicio = () => {
           </seccion>
           
           <seccion>
-            {/* Aquí irán las noticias del instituto*/}
+            {/* Aquí irán las noticias del*/}
           </seccion>
         </div>
     );

@@ -124,6 +124,7 @@
     gap: 10px;
 }
 
+
 .nuestrasCarreras_carreras_carrera_info_encabezado_titulos_p1 {
     font-size: 1.3rem;
     color: var(--color-text-light);
@@ -263,6 +264,18 @@
 
 
     /* CARRERAS */
+    .nuestrasCarreras_encabezado h3 {
+        font-size: 1.3rem;
+    }
+
+    .nuestrasCarreras_encabezado h2 {
+        font-size: 2.5rem;
+        padding: 0 5%;
+    
+    }
+
+     /* contenedor → pasa a columna */
+
     .nuestrasCarreras_carreras {
         flex-direction: column;
         gap: 20px;
@@ -277,17 +290,43 @@
         text-align: center;
     }
 
+    .nuestrasCarreras_carreras_carrera_info button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 5px 6px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    }
+
     .nuestrasCarreras_carreras_carrera img {
         width: 100%;
         border-radius: 0 0 20px 20px;
     }
 
+    
+
     .nuestrasCarreras_carreras_carrera_info_encabezado {
         flex-direction: column;
     }
 
+    .nuestrasCarreras_carreras_carrera_info_encabezado img {
+    display: none;
+}
+
+    .nuestrasCarreras_carreras_carrera_info_parrafo {
+        display: none;
+    }
+
     .nuestrasCarreras_carreras_carrera_info_encabezado_titulos_h4 {
         font-size: 2rem;
+    }
+
+    .nuestrasCarreras_carreras_carrera_info_encabezado_titulos_p3 {
+        font-size: 1.2rem;
     }
 
 
