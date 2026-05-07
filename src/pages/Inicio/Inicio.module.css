@@ -335,17 +335,32 @@
         justify-content: center;
     }
 
+     /* contenedor → pasa a columna */
+    .nuestrasCarreras_carreras {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* card sigue horizontal */
     .nuestrasCarreras_carreras_carrera {
-        width: 45%;
+        flex-direction: row; /* 👈 importante */
     }
 
+    /* info mantiene proporción */
     .nuestrasCarreras_carreras_carrera_info {
-        width: 100%;
+        width: 60%;
+        align-items: flex-start; /* más natural en mobile */
+        text-align: left;
     }
 
+    /* imagen igual que desktop */
     .nuestrasCarreras_carreras_carrera img {
-        width: 100%;
-        border-radius: 0 0 20px 20px;
+        width: 40%;
+        height: auto;
+    }
+
+    /* ocultar los <p> del encabezado */
+    .nuestrasCarreras_carreras_carrera_info_encabezado p {
     }
 
 
