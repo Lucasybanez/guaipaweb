@@ -106,7 +106,7 @@ const Inicio = () => {
           </seccion>
           
           <seccion>
-            {/* Aquí irán las noticias */}
+            {/* Aquí irán las noticias del instituto*/}
           </seccion>
         </div>
     );
