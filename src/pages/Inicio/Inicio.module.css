@@ -405,9 +405,12 @@
 
     /* DISTINTIVOS */
     .distintivos_box {
-        flex: 1 1 50%;
+        width: 25% !important; /* MODIFICAR PARA QUE SEAN 4 POR FILA*/
     }
 
+    .distintivos_box p{
+        display: none;
+    }
     .distintivos_box:nth-child(2n) {
         border-right: none;
     }

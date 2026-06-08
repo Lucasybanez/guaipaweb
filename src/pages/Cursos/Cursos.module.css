@@ -1,0 +1,379 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    margin-top: 80px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 5%;
+    background: var(--color-bg-strong);
+}
+
+.hero_info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero_subtitulo {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero_info h1 {
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+
+.hero_descripcion {
+    max-width: 600px;
+    color: var(--color-text-light);
+    margin-bottom: 30px;
+}
+
+.hero_botones {
+    display: flex;
+    gap: 20px;
+}
+
+.botonPrimario {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.botonPrimario:hover {
+    background: var(--color-primary-dark);
+}
+
+.botonSecundario {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 25px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.hero_img {
+    width: 45%;
+    max-width: 550px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   ESTADÍSTICAS
+========================= */
+
+.estadisticas {
+    margin: -50px 5% 100px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    position: relative;
+    z-index: 2;
+}
+
+.estadistica {
+    text-align: center;
+}
+
+.estadistica h2 {
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.estadistica p {
+    color: var(--color-text-light);
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.encabezadoCursos {
+    text-align: center;
+    padding: 0 5%;
+    margin-bottom: 60px;
+}
+
+.encabezadoCursos h3 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.encabezadoCursos h2 {
+    margin-bottom: 20px;
+}
+
+.encabezadoCursos p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--color-text-light);
+}
+
+
+/* =========================
+   CURSOS
+========================= */
+
+.cursosGrid {
+    padding: 0 5%;
+    margin-bottom: 120px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.cursoCard {
+    overflow: hidden;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #ececec;
+    transition: all .25s ease;
+}
+
+.cursoCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.cursoCard_imagen {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.cursoCard_contenido {
+    padding: 25px;
+}
+
+.cursoCard_categoria {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 50px;
+    background: rgba(0,0,0,.05);
+    color: var(--color-primary);
+    font-size: .85rem;
+    margin-bottom: 15px;
+}
+
+.cursoCard_contenido h3 {
+    margin-bottom: 15px;
+}
+
+.cursoCard_contenido p {
+    color: var(--color-text-light);
+}
+
+.cursoCard_meta {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.cursoCard_meta span {
+    font-size: .85rem;
+    background: var(--color-bg-strong);
+    padding: 6px 12px;
+    border-radius: 50px;
+}
+
+.cursoCard button {
+    width: 100%;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.cursoCard button:hover {
+    background: var(--color-primary-dark);
+}
+
+
+/* =========================
+   BENEFICIOS
+========================= */
+
+.beneficios {
+    margin: 0 5% 120px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.beneficio {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid #ececec;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.beneficio img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.beneficio h3 {
+    margin-bottom: 5px;
+}
+
+.beneficio p {
+    color: var(--color-text-light);
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    margin: 0 5% 120px;
+    background: var(--color-primary);
+    border-radius: 30px;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.cta_contenido {
+    max-width: 800px;
+    margin: auto;
+}
+
+.cta h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    color: rgba(255,255,255,.9);
+    margin-bottom: 30px;
+}
+
+.cta button {
+    background: white;
+    color: var(--color-primary);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.cta button:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero_info {
+        align-items: center;
+    }
+
+    .hero_img {
+        width: 70%;
+    }
+
+    .cursosGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero_info h1 {
+        font-size: 2rem;
+    }
+
+    .hero_img {
+        width: 100%;
+    }
+
+    .hero_botones {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .botonPrimario,
+    .botonSecundario {
+        width: 100%;
+    }
+
+    .estadisticas {
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .cursosGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .cursoCard_imagen {
+        height: 220px;
+    }
+
+    .beneficio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta {
+        padding: 50px 25px;
+    }
+
+    .cta h2 {
+        font-size: 2rem;
+    }
+}
