@@ -1,0 +1,97 @@
+{
+  "usuarios": [
+    {
+      "id_usuario": 1,
+      "nombre": "Marcelo Adrian",
+      "apellido": "Urueña",
+      "email": "marcelo.uruena@example.com",
+      "password_hash": "$2b$12$dQw4w9Wg...[hash]",
+      "rol": "administrador",
+      "estado": "activo",
+      "fecha_creacion": "2026-01-15T09:00:00Z",
+      "ultimo_acceso": "2026-06-09T14:30:00Z",
+      "id": "BwvcC5_bycE"
+    },
+    {
+      "id_usuario": 3,
+      "nombre": "Carlos",
+      "apellido": "Gómez",
+      "email": "carlos.gomez@example.com",
+      "password_hash": "$2b$12$yZ1x2w3v...[hash]",
+      "rol": "estudiante",
+      "estado": "activo",
+      "fecha_creacion": "2026-03-01T14:00:00Z",
+      "ultimo_acceso": "2026-06-09T17:05:00Z",
+      "id": "ezrtX9YhMQ0"
+    },
+    {
+      "nombre": "Lucas",
+      "apellido": "Ybañez",
+      "email": "luck.facebook@hotmail.com",
+      "password": "Lucas1234",
+      "id": "wENblFH_C4I"
+    },
+    {
+      "nombre": "franco alvarez",
+      "apellido": "alvarez",
+      "email": "francoalvarez858@gmail.com",
+      "password": "Franco1342",
+      "id": "7zNNs_l22ls"
+    }
+  ],
+  "cursos": [
+    {
+      "id_curso": 1,
+      "nombre": "Aportes para la Formación Docente sobre Territorios, Cultura y Sociedades en América Latina",
+      "slug": "aportes-formacion-docente-territorios-america-latina",
+      "descripcion_corta": "Capacitación con puntaje docente sobre identidades territoriales.",
+      "descripcion_larga": "Esta capacitación está fundada bajo el Eje Prioritario: Ambientes e Identidades en Tucumán...",
+      "precio": 4500,
+      "img_portada": 1,
+      "video_promo": "https://example.com/videos/promo-territorios.mp4",
+      "moodle_course_id": 101,
+      "estado": "publicado",
+      "fecha_creacion": "2026-01-20T10:00:00Z",
+      "id": "uNA8OdOTle8"
+    }
+  ],
+  "imagenes_cursos": [
+    {
+      "id_img": 1,
+      "id_curso": 1,
+      "url": "https://example.com/images/cursos/territorios-portada.jpg",
+      "orden": 1,
+      "id": "Uoe-tHvyLKE"
+    }
+  ],
+  "inscripciones": [
+    {
+      "id_inscripcion": 1,
+      "id_usuario": 3,
+      "id_curso": 1,
+      "fecha_inscripcion": "2026-03-05T18:22:00Z",
+      "estado": "activa",
+      "id": "zkBSQi4HJcM"
+    }
+  ],
+  "pagos": [
+    {
+      "id_pago": 1,
+      "id_usuario": 3,
+      "id_curso": 1,
+      "monto": 4500,
+      "metodo_pago": "tarjeta_credito",
+      "estado": "aprobado",
+      "ref_externa": "ch_3Mv8L2E2eZvKYlo20C4vB9wA",
+      "fecha_creacion": "2026-03-05T18:20:00Z",
+      "fecha_aprobacion": "2026-03-05T18:22:00Z",
+      "id": "TC7cuRXo__0"
+    }
+  ],
+  "configuracion": {
+    "nombre_plataforma": "Instituto Superior GUAIPA - E-Learning",
+    "version": "1.0.0",
+    "estado_moodle_api": "online"
+  },
+  "$schema": "./node_modules/json-server/schema.json"
+}
