@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import clsx from "clsx";
+import axios from "axios";
+import Swal from "sweetalert2";
+import { jwtDecode } from "jwt-decode";
 
 import styles from "./InicioSesion.module.css";
 
@@ -11,11 +15,15 @@ import {
 } from "lucide-react";
 
 export default function InicioSesion() {
+  const API_USUARIOS = import.meta.env.VITE_API_USUARIOS;
+
+  const [loading, setLoading] = useState(false);
+
+  const [usuarioLogueadoError, setUsuarioLogueadoError] =
+    useState(false);
+
   const emailRegex =
     /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-
-  const contraseñaRegex =
-    /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 
   const esquemaLogin = Yup.object().shape({
     Email: Yup.string()
@@ -25,12 +33,9 @@ export default function InicioSesion() {
         "Ingrese un email válido"
       ),
 
-    Contraseña: Yup.string()
-      .required("La contraseña es requerida")
-      .matches(
-        contraseñaRegex,
-        "Debe contener entre 8 y 16 caracteres, una mayúscula, una minúscula y un número"
-      ),
+    Contraseña: Yup.string().required(
+      "La contraseña es requerida"
+    ),
   });
 
   const formik = useFormik({
@@ -44,10 +49,52 @@ export default function InicioSesion() {
     validateOnBlur: true,
     validateOnChange: true,
 
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values) => {
+      try {
+        setLoading(true);
+        setUsuarioLogueadoError(false);
 
-      // Login endpoint después
+        const usuarioLogueado = {
+          Email: values.Email,
+          Contrasena: values.Contraseña,
+        };
+
+        const response = await axios.post(
+          `${API_USUARIOS}/login`,
+          usuarioLogueado
+        );
+
+        Swal.fire({
+          icon: "success",
+          title: "Usuario logueado con éxito",
+          text: "Tus datos fueron ingresados correctamente",
+          confirmButtonColor: "#8bc218",
+        });
+
+        const token = response.data.data.token;
+
+        localStorage.setItem("token", token);
+
+        const decode = jwtDecode(token);
+
+        if (decode.Rol === "administrador") {
+          window.location.href = "/administrador";
+        } else {
+          window.location.href = "/campus";
+        }
+      } catch (error) {
+        console.error(error);
+
+        setUsuarioLogueadoError(true);
+
+        Swal.fire({
+          icon: "warning",
+          title: "Datos incorrectos",
+          text: "Email o contraseña inválidos",
+        });
+      } finally {
+        setLoading(false);
+      }
     },
   });
 
@@ -66,6 +113,12 @@ export default function InicioSesion() {
             al campus y continuar tu formación en
             el Instituto Superior de Arte Guaipa.
           </p>
+
+          {usuarioLogueadoError && (
+            <span className={styles.errorLogin}>
+              Email o contraseña incorrectos
+            </span>
+          )}
 
           <form
             className={styles.form}
@@ -145,9 +198,11 @@ export default function InicioSesion() {
             <button
               type="submit"
               className={styles.submitBtn}
-              disabled={!formik.isValid}
+              disabled={!formik.isValid || loading}
             >
-              INGRESAR
+              {loading
+                ? "INGRESANDO..."
+                : "INGRESAR"}
             </button>
           </form>
 
